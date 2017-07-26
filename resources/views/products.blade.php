@@ -57,7 +57,7 @@
 </div>
 @endsection
 
-{{-- scripts only for this page for client-side processing --}}
+{{-- scripts that are only loaded in this page --}}
 @push('scripts')
 <script>
 
@@ -66,30 +66,28 @@ $(document).ready(function() {
 
     //products table
     var table = $('#products-table').DataTable({
-        processing: true,
-        serverSide: true,
-        responsive: true,
-        ajax: '{!! route('products.getproducts') !!}', //refer to 
+        processing: true,                               //
+        serverSide: true,                               //
+        responsive: true,                               //
+        ajax: '{!! route('products.getproducts') !!}',  //feed data from this ajax
         //custom button definition
-        dom: "<'row'<'col-sm-4'l><'col-sm-4 text-center'B><'col-sm-4'f>>tp", //this will custom define the header of the table
+        dom: "<'row'<'col-sm-4'l><'col-sm-4 text-center'B><'col-sm-4'f>>tp",
         //buttons 
         buttons: [
-                    {
-                    text: '<i class="fa fa-refresh"></i> Refresh',
-                    action: function ( e, dt, node, config ) {
+            { 
+            text: '<i class="fa fa-refresh"></i> Refresh',
+                action: function ( e, dt, node, config ) {
 
-                        //reload the table from the server
-                        dt.ajax.reload();
+                    //reload the table from the server
+                    dt.ajax.reload();
 
                         } //end action
 
-                    },
-                                        {
-                    text: '<i class="fa fa-refresh"></i> Select',
-                    action: function ( e, dt, node, config ) {
+                    }, //end button
+            {
+            text: '<i class="fa fa-check-square"></i> Select Multiple',
+                action: function ( e, dt, node, config ) {
 
-                        //reload the table from the server
-                        dt.ajax.reload();
 
                         } //end action
 
