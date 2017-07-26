@@ -32,4 +32,4 @@ Route::get('/products/getproducts', ['as'=>'products.getproducts','uses'=>'Syste
 
 
 
-Route::get('/inquiry_form', 'InquiryController@index');
+Route::get('/create_new', 'InquiryController@index');

@@ -8,7 +8,7 @@ use Session;
 class InquiryController extends Controller
 {
 	public function index(){
-		return view ('customers.inquiry_form');
+		return view ('customers.create_new');
 	}
     /*public $table = "customers";
     public $fillable = [

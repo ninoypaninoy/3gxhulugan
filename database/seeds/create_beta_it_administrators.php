@@ -26,7 +26,7 @@ class create_beta_it_administrators extends Seeder
         DB::table('users')->insert([
             'first_name'        => 'Jorge Benigno',
             'last_name'         => 'Pante',
-            'email'             => 'ninoypaninoy@gmail.com',
+            'email'             => 'paninoy@gmail.com',
             'username'          => 'jopante',
             'password'          => bcrypt('1'),
             'role_id'           => 1,				///ID of IT Administrator on Roles Table
