@@ -481,7 +481,7 @@ class CreateDatabaseTable extends Migration
         /********************* QUESTIONS TABLE *******************/
         Schema::create('questions', function(Blueprint $table) {
             $table->increments('id')->unique();
-            $table->string('description');
+            $table->string('description', 5000);
 
         }); //end schema
 

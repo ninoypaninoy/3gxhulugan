@@ -33,7 +33,7 @@
                             <a href="{{ url('system-user/profile') }}" align="middle">
                                 <span class="clear">
                                     <!-- Display Current User and Role -->
-                                    <span class="block m-t-xs"><strong class="font-bold">{{ Auth::user()->name }}</strong></span>
+                                    <span class="block m-t-xs"><strong class="font-bold">{{ Auth::user()->first_name }} {{ Auth::user()->last_name }}</strong></span>
                                     <span class="text-muted text-xs block">IT Administrator</span>
                                 </span>
                             </a>
@@ -123,7 +123,7 @@
                     </a>
                 </li>
                 <li>
-                    <a class="count-info" href="{{ url('help') }}">
+                    <a class="count-info" target="_blank" href="http://3gxhulugan.com/">
                         <i class="fa fa-question-circle"></i>
                     </a>
                 </li>
