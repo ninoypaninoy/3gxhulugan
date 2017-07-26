@@ -71,6 +71,26 @@ class InsertDefaultValuesIntoDatabaseTable extends Migration
         ]); //end insert
 
         /******************* INSERT DEFAULT USERS TABLE ***********************/
+        //THIS IS NOT RECOMMENDED THO. FOR DEVELOPMENT SEEDING ONLY
+        //IN PRODUCTION. USERNAMES AND PASSWORDS MUST BE FAR DIFFERENT IN THIS 
+        //SAMPLE DATA
+        DB::table('users')->insert([
+            'first_name'        => 'Joshua',
+            'last_name'         => 'Alarcon',
+            'email'             => 'josh@live.com.ph',
+            'username'          => 'jalarcon',
+            'password'          => bcrypt('123456'),
+            'role_id'           => 1,
+        ]); //end insert
+
+        DB::table('users')->insert([
+            'first_name'        => 'Jorge Benigno',
+            'last_name'         => 'Pante',
+            'email'             => 'ninoypaninoy@gmail.com',
+            'username'          => 'jopante',
+            'password'          => bcrypt('123456'),
+            'role_id'           => 1,
+        ]); //end insert
 
     } //end function
 
