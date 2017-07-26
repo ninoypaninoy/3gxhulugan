@@ -129,7 +129,7 @@ class CreateDatabaseTable extends Migration
             $table->increments('id')->unique();
             $table->enum('type', array('inquirer','applicant', 'borrower','fully-paid')); //these are the four (4) customer types identified
             $table->enum('category', array('employed','self-employed','remittance', 'pensioner')); // these are four (4) customer categories identified
-            $table->string('first_name');
+            $table->string('first_name'); 
             $table->string('last_name');
             $table->string('middle_name')->nullable(); //there are some customers that has no middle name
             $table->string('name_extension')->nullable();

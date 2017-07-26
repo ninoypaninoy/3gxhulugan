@@ -12,6 +12,7 @@
 */
 
 Auth::routes();
+use Illuminate\Http\Request;
 
 /*=========================== INDEX PAGE ROUTERS ==============================*/
 Route::get('/', function () {
@@ -28,3 +29,7 @@ Route::get('/home', 'HomeController@index');
 //route for products layout file and another one for getting data
 Route::get('/products',['uses' => 'SystemUsersController@getIndex']); 
 Route::get('/products/getproducts', ['as'=>'products.getproducts','uses'=>'SystemUsersController@getProducts']);
+
+
+
+Route::get('/inquiry_form', 'InquiryController@index');

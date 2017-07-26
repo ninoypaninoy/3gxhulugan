@@ -11,6 +11,7 @@
     <!-- Load CSS Files -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="css/plugins/steps/jquery.steps.css" rel="stylesheet">
     <link href="css/animate.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="css/plugins/dyscrollup/dyscrollup.css">
@@ -54,7 +55,7 @@
                     <li>
                         <a href="#"><i class="fa fa-comments"></i> <span class="nav-label">Inquiries</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
-                            <li><a href="{{ url('applications/for-ci-investigation') }}"><i class="fa fa-plus-circle"></i>Create New</a></li>
+                            <li><a href="{{ url('/inquiry_form') }}"><i class="fa fa-plus-circle"></i>Create New</a></li>
                             <li><a href="{{ url('applications/for-auditing') }}"><i class="fa fa-comments-o"></i>Inquiries</a></li>
                         </ul>
                     </li>
@@ -160,6 +161,10 @@
     <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
     <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
     <script src="js/plugins/dataTables/datatables.min.js"></script>
+    <!--steps-->
+    <script src="js/plugins/steps/jquery.steps.min.js"></script>
+    <!-- Jquery Validate -->
+    <script src="js/plugins/validate/jquery.validate.min.js"></script>
     <!-- Custom and plugin javascript -->
     <script src="js/inspinia.js"></script>
     <script src="js/plugins/pace/pace.min.js"></script>
