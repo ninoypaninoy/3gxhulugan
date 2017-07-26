@@ -29,7 +29,7 @@
                         <div class="profile-element">
                             <span>
                                 <!-- Display Logo -->
-                                <img alt="image" src="img/home-logo-medium.png"/>
+                                <img  alt="image" src="img/home-logo-medium.png"/>
                             </span>
                             <a href="{{ url('system-user/profile') }}" align="middle">
                                 <span class="clear">
@@ -171,9 +171,6 @@
     <script src="js/plugins/steps/jquery.steps.min.js"></script>
     <!-- Jquery Validate -->
     <script src="js/plugins/validate/jquery.validate.min.js"></script>
-    <!-- Custom and plugin javascript -->
-    <script src="js/inspinia.js"></script>
-    <script src="js/plugins/pace/pace.min.js"></script>
     <!-- jQuery UI -->
     <script src="js/plugins/jquery-ui/jquery-ui.min.js"></script>
     <!-- GITTER -->
