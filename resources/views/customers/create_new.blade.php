@@ -17,7 +17,7 @@
                 <div class="col-lg-12">
                     <div class="ibox">
                         <div class="ibox-title">
-                            <h5>Wizard with Validation</h5>
+                            <h5>Create new</h5>
                             <div class="ibox-tools">
                                 <a class="collapse-link">
                                     <i class="fa fa-chevron-up"></i>
@@ -37,30 +37,33 @@
                             </div>
                         </div>
                         <div class="ibox-content">
-                            <h2>
-                                Validation Wizard Form
-                            </h2>
-                            <p>
-                                This example show how to use Steps with jQuery Validation plugin.
-                            </p>
+                            
 
                             <form id="form" action="#" class="wizard-big">
-                                <h1>Account</h1>
+                                <h1>Customer Information</h1>
                                 <fieldset>
-                                    <h2>Account Information</h2>
+                                    <h2>General Information</h2>
                                     <div class="row">
                                         <div class="col-lg-8">
                                             <div class="form-group">
-                                                <label>Username *</label>
-                                                <input id="userName" name="userName" type="text" class="form-control required">
+                                                <label>First name *</label>
+                                                <input id="first_name" name="first_name" type="text" placeholder="First name" class="form-control required">
                                             </div>
                                             <div class="form-group">
-                                                <label>Password *</label>
-                                                <input id="password" name="password" type="text" class="form-control required">
+                                                <label>Middle name</label>
+                                                <input id="middle_name" name="middle_name" type="text" placeholder="Middle name" class="form-control">
                                             </div>
                                             <div class="form-group">
-                                                <label>Confirm Password *</label>
-                                                <input id="confirm" name="confirm" type="text" class="form-control required">
+                                                <label>Last name *</label>
+                                                <input id="last_name" name="last_name" type="text" placeholder="Last name" class="form-control required">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Extension name</label>
+                                                <input id="name_extension" name="name_extension" type="text" placeholder="Extension name" class="form-control">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Birth date *</label>
+                                                <input id="birth_date" name="birth_date" type="text" placeholder="Birth date" class="form-control required">
                                             </div>
                                         </div>
                                         <div class="col-lg-4">
@@ -73,44 +76,97 @@
                                     </div>
 
                                 </fieldset>
-                                <h1>Profile</h1>
+                                <h1>Information</h1>
                                 <fieldset>
-                                    <h2>Profile Information</h2>
+                                    <h2>Additional Information</h2>
+                                    <div class="hr-line-dashed"></div>
                                     <div class="row">
+                                    	<!--<div class="col-lg-12">
+	                                    	<div class="form-group">
+	                                    		<label class="control-label">Inline checkboxes</label><br>
+			                                    <div class="col-sm-10">
+			                                    	<label class="checkbox-inline"> <input type="checkbox" value="option1" id="inlineCheckbox1"> Inquirer </label>
+			                                    	<label class="checkbox-inline"><input type="checkbox" value="option2" id="inlineCheckbox2"> Applicant </label>
+			                                    	<label class="checkbox-inline"><input type="checkbox" value="option3" id="inlineCheckbox3"> Borrower </label>
+			                                        <label class="checkbox-inline"><input type="checkbox" value="option3" id="inlineCheckbox3"> Fully paid </label>
+			                                    </div>
+			                                </div>
+			                            </div>-->
                                         <div class="col-lg-6">
                                             <div class="form-group">
-                                                <label>First name *</label>
-                                                <input id="name" name="name" type="text" class="form-control required">
+                                                <label>Street number *</label>
+                                                <input id="street_no" name="street_no" type="text" placeholder="#" class="form-control required">
                                             </div>
                                             <div class="form-group">
-                                                <label>Last name *</label>
-                                                <input id="surname" name="surname" type="text" class="form-control required">
+                                                <label>Barangay *</label>
+                                                <input id="barangay" name="barangay" type="text" placeholder="Barangay" class="form-control required">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            
+                                            <div class="form-group">
+                                                <label>Street *</label>
+                                                <input id="street" name="street" type="text" placeholder="Street" class="form-control required">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Municipality *</label>
+                                                <input id="municipality" name="municipality" type="text" placeholder="Municipality" class="form-control required">
+                                            </div>
+                                    	</div>
+                                    	<div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label>Zipcode *</label>
+                                                <input id="zip-code" name="zip-code" type="text" placeholder="Zipcode" class="form-control required">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                        	<div class="form-group">
+                                                <label>Years of stay *</label>
+                                                <input id="years_of_stay" name="years_of_stay" type="text" placeholder="Years of stay" class="form-control required">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="hr-line-dashed"></div>
+                                    <div class="row">
+                                    	<div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label>Gender *</label>
+                                                <select class="form-control m-b" name="account">
+			                                        <option>Male</option>
+			                                        <option>Female</option>
+			                                    </select>
                                             </div>
                                         </div>
                                         <div class="col-lg-6">
                                             <div class="form-group">
-                                                <label>Email *</label>
-                                                <input id="email" name="email" type="text" class="form-control required email">
+                                                <label>Civil status *</label>
+                                                <select class="form-control m-b" name="account">
+			                                        <option>Single</option>
+			                                        <option>Married</option>
+			                                        <option>Widowed</option>
+			                                        <option>Divorced</option>
+			                                    </select>
                                             </div>
+                                        </div>
+                                        <div class="col-lg-6">
                                             <div class="form-group">
-                                                <label>Address *</label>
-                                                <input id="address" name="address" type="text" class="form-control">
+                                                <label>Email</label>
+                                                <input id="email" name="email" type="text" placeholder="Email" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label>Contact number *</label>
+                                                <input id="contact_no" name="contact_no" type="text" placeholder="Contact number" class="form-control required">
                                             </div>
                                         </div>
                                     </div>
-                                </fieldset>
-
-                                <h1>Warning</h1>
-                                <fieldset>
-                                    <div class="text-center" style="margin-top: 120px">
-                                        <h2>You did it Man :-)</h2>
+                                    <div class="hr-line-dashed"></div>
+                                    <div class="row">
+                                    	<label>Remarks</label>
+                                    	<textarea id="encoder_remarks" type="textarea" name="encoder_remarks" placeholder="Remarks..." class="form-control"></textarea>
                                     </div>
-                                </fieldset>
-
-                                <h1>Finish</h1>
-                                <fieldset>
-                                    <h2>Terms and Conditions</h2>
-                                    <input id="acceptTerms" name="acceptTerms" type="checkbox" class="required"> <label for="acceptTerms">I agree with the Terms and Conditions.</label>
+                                    <div class="hr-line-dashed"></div>
                                 </fieldset>
                             </form>
                         </div>
@@ -120,6 +176,7 @@
 @endsection
 
 @push('scripts')
+
 <script>
 $(document).ready(function(){
             $("#wizard").steps();
