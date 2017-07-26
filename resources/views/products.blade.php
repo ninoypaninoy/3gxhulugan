@@ -97,18 +97,7 @@ $(document).ready(function() {
         
         //column definition
         columns: [
-            { data: 'Item_No', name: 'Item_No',
-                "render": function(data, type, full, meta) {
-
-                            if (type === 'display') {
-                                Item_No = data;
-                                data = data +   '<div class="inline-action-view  animated fadeIn">' +
-                                                '<a href="inquiry-item/id='+ Item_No +'" ") }}" ><i class="fa fa-shopping-cart"></i><strong> ADD to INQUIRY</strong></a>' +
-                                            '</div>';
-                            }
-                            return data;
-                        }
-            },
+            { data: 'Item_No', name: 'Item_No' },
             { data: 'Item_Desc', name: 'Item_Desc' },
             { data: 'Item_Price', name: 'Item_Price' },
             { data: 'Item_No', name: 'Item_No'},
