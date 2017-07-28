@@ -33,4 +33,7 @@ Route::post('/customers', ['as' => 'customers_store', 'uses' => 'CustomerControl
 Route::get('/products',['uses' => 'SystemUsersController@getIndex']); 
 Route::get('/products/getproducts', ['as'=>'products.getproducts','uses'=>'SystemUsersController@getProducts']);
 
+/*============================ VALIDATION ROUTES ===============================*/
+Route::get('customers/formValidation', 'CustomerController@formValidation');
+Route::post('customers/formValidationPost', 'CustomerController@formValidationPost');
 

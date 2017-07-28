@@ -45,11 +45,11 @@
 									<!--Input field for first_name-->
 									<div class="form-group{{ $errors->has('first_name') ? 'has-error' : '' }}">
 									    {!! Form::label('First name') !!}
-									    {!! Form::text('first_name', null, array('required', 'class'=>'form-control', 'placeholder'=>'First name')) !!}
+									    {!! Form::text('first_name', null, array('required', 'class'=>'form-control', 'placeholder'=>'First name', 'value'=>"{{ old('first_name') }}")) !!}
 
 									        @if ($errors->has('first_name'))
-				                            <span class="help-block">
-				                            	<strong><i class="fa fa-exclamation-triangle"></i> {{ $errors->first('first_name') }}</strong>
+				                            <span class="help-block" style="color:#f14232;">
+				                            	<strong><i class="fa fa-exclamation-triangle" style="color:#F14232;"></i> {{ $errors->first('first_name') }}</strong>
 				                            </span>
 				                        @endif
 									
@@ -63,8 +63,8 @@
 									    {!! Form::text('middle_name', null, array('class'=>'form-control', 'placeholder'=>'First name')) !!}
 
 									        @if ($errors->has('middle_name'))
-				                            <span class="help-block">
-				                            	<strong><i class="fa fa-exclamation-triangle"></i> {{ $errors->first('middle_name') }}</strong>
+				                            <span class="help-block" style="color:#F14232;">
+				                            	<strong><i class="fa fa-exclamation-triangle" style="color:#F14232;"></i> {{ $errors->first('middle_name') }}</strong>
 				                            </span>
 				                        @endif
 									
@@ -85,8 +85,8 @@
 									              'placeholder'=>'Last name')) !!}
 
 									        @if ($errors->has('last_name'))
-				                            <span class="help-block">
-				                            	<strong><i class="fa fa-exclamation-triangle"></i> {{ $errors->first('last_name') }}</strong>
+				                            <span class="help-block" style="color:#F14232;">
+				                            	<strong><i class="fa fa-exclamation-triangle" style="color:#F14232;"></i> {{ $errors->first('last_name') }}</strong>
 				                            </span>
 				                        @endif
 									
@@ -100,8 +100,8 @@
 									    {!! Form::text('name_extension', null, array('class'=>'form-control', 'placeholder'=>'Extension name')) !!}
 
 									        @if ($errors->has('name_extension'))
-				                            <span class="help-block">
-				                            	<strong><i class="fa fa-exclamation-triangle"></i> {{ $errors->first('name_extension') }}</strong>
+				                            <span class="help-block" style="color:#F14232;">
+				                            	<strong><i class="fa fa-exclamation-triangle" style="color:#F14232;"></i> {{ $errors->first('name_extension') }}</strong>
 				                            </span>
 				                        @endif
 									

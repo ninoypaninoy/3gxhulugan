@@ -34,10 +34,32 @@ class CustomerController extends Controller
         $customers->save();
 
         return view('products');
-  }
+    }
 
     public function applied_by(){
       return $this->belongsTo(User::class,'encoded_by','id');
     }
+
+    public function formValidation(){
+        return view('customers.formValidation');
+    } //end formValidation() method
+
+    public function formValidationPost(){
+        $this->validate($request,[
+            'first_name'    =>      'required|min:2|max:35|alpha',
+            'last_name'     =>      'required|min:2|max:35|alpha',            
+        ],[
+            'first_name.required'       =>      '* The first name field is required.',
+            'first_name.min'            =>      '* The first name must be at least 2 characters.',
+            'first_name.max'            =>      '* The first name may not be greater than 35 characters.',
+            'first_name.alpha'          =>      '* The first name must not contain numbers.',
+            'last_name.required'        =>      '* The last name field is required.',
+            'last_name.min'             =>      '* The last name must be at least 2 characters.',
+            'last_name.max'             =>      '* The last name may not be greater than 35 characters.',
+            'last_name.alpha'           =>      '* The last name must not contain numbers.',
+        ]);
+
+        dd('Successfully added all fielads.');
+    } //end formValidationPost() method
 }
  

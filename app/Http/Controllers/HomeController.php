@@ -3,6 +3,7 @@
 namespace Hulugan\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests;
 
 class HomeController extends Controller
 {
@@ -56,5 +57,7 @@ class HomeController extends Controller
         return view('home', array('greetings' => $greetings[rand(0, count($greetings) - 1)] ));
 
     } //end function index
+
+    
 
 } //end controller
