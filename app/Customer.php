@@ -6,13 +6,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class Customer extends Model
 {
+	//...
+	protected $fillable = ['first_name', 'middle_name', 'last_name', 'name_extension', 'birth_date'];
+
+	// Many to one relationship between Customer and User
     public function user(){
     	return $this->belongsTo('User');
     }
 
-    public static function find(id, $first_name = null){
-    	$customer = static::with('user')->find($id);
-
-    	if($first_name and $customer->user->)
-    }
+   
 }
+ 

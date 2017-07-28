@@ -17,70 +17,127 @@
 					</div>
 				</div>
 				<div class="ibox-content">
-					<form class="wizard-big" role="form" method="POST" id="form" action="#">
 						{{ csrf_field() }}
-						<div class="row">
-							<div class="col-lg-6">
-								<form class="form-group{{ $errors->has('first_name') ? 'has-error' : '' }}">
-									<label>First name :</label>
-									<input id="first_name" type="text" name="first_name" placeholder="First name" class="form-control"  required autofocus>
+						<!--Form opening-->
+						{!! Form::open(array('route' => 'customers_store', 'class' => 'form')) !!}
+							<!--Row opening-->
+							<div class="row">
+								<div class="col-lg-6">
+									<!--Dropdown input for Branch-->
+									<div class="form-group{{ $errors->has('first_name') ? 'has-error' : '' }}">
+									    {!! Form::label('Branch') !!}
+									    {{ Form::select('branch_id', [1 => '3GX Main', 2 => '3GX Legazpi', 3 => '3GX Tabaco', 4 => '3GX Daet'], null, ['class' => 'form-control']) }}
 
-									@if ($errors->has('first_name'))
-			                            <span class="help-block">
-			                            	<strong><i class="fa fa-exclamation-triangle"></i> {{ $errors->first('first_name') }}</strong>
-			                            </span>
-			                        @endif
-								</form>
+									        @if ($errors->has('branch_id'))
+				                            <span class="help-block">
+				                            	<strong><i class="fa fa-exclamation-triangle"></i> {{ $errors->first('branch_id') }}</strong>
+				                            </span>
+				                        @endif
+									
+									</div>
+									<!--Dropdown end-->
+								</div>
 							</div>
-							<div class="col-lg-6">
-								<form class="form-group{{ $errors->has('middle_name') ? 'has-error' : '' }}">
-									<label>Middle name :</label>
-									<input id="middle_name" type="text" name="middle_name" placeholder="Middle name" class="form-control"  required>
+							<!--Row closing-->
+							<!--Row opening-->
+							<div class="row">
+								<div class="col-lg-6">
+									<!--Input field for first_name-->
+									<div class="form-group{{ $errors->has('first_name') ? 'has-error' : '' }}">
+									    {!! Form::label('First name') !!}
+									    {!! Form::text('first_name', null, array('required', 'class'=>'form-control', 'placeholder'=>'First name')) !!}
 
-									@if ($errors->has('middle_name'))
-			                            <span class="help-block">
-			                            	<strong><i class="fa fa-exclamation-triangle"></i> {{ $errors->first('middle_name') }}</strong>
-			                            </span>
-			                        @endif
-								</form>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-lg-6">
-								<form class="form-group{{ $errors->has('last_name') ? 'has-error' : '' }}">
-									<label>Last name :</label>
-									<input id="last_name" type="text" name="last_name" placeholder="Last name" class="form-control"  required>
+									        @if ($errors->has('first_name'))
+				                            <span class="help-block">
+				                            	<strong><i class="fa fa-exclamation-triangle"></i> {{ $errors->first('first_name') }}</strong>
+				                            </span>
+				                        @endif
+									
+									</div>
+									<!--Input field end-->
+								</div>
+								<div class="col-lg-6">
+									<!--Input field for middle_name-->
+									<div class="form-group{{ $errors->has('middle_name') ? 'has-error' : '' }}">
+									    {!! Form::label('Middle name') !!}
+									    {!! Form::text('middle_name', null, array('class'=>'form-control', 'placeholder'=>'First name')) !!}
 
-									@if ($errors->has('last_name'))
-			                            <span class="help-block">
-			                            	<strong><i class="fa fa-exclamation-triangle"></i> {{ $errors->first('last_name') }}</strong>
-			                            </span>
-			                        @endif
-								</form>
+									        @if ($errors->has('middle_name'))
+				                            <span class="help-block">
+				                            	<strong><i class="fa fa-exclamation-triangle"></i> {{ $errors->first('middle_name') }}</strong>
+				                            </span>
+				                        @endif
+									
+									</div>
+									<!--Input field end-->
+								</div>
 							</div>
-							<div class="col-lg-6">
-								<form class="form-group{{ $errors->has('name_extension') ? 'has-error' : '' }}">
-									<label>Extension name :</label>
-									<input id="name_extension" type="text" name="name_extension" placeholder="Extension name" class="form-control"  required>
+							<!--Row closing-->
+							<!--Row opening-->
+							<div class="row">
+								<div class="col-lg-6">
+									<!--Input field for last_name-->
+									<div class="form-group{{ $errors->has('last_name') ? 'has-error' : '' }}">
+									    {!! Form::label('Last name') !!}
+									    {!! Form::text('last_name', null, 
+									        array('required', 
+									              'class'=>'form-control', 
+									              'placeholder'=>'Last name')) !!}
 
-									@if ($errors->has('name_extension'))
-			                            <span class="help-block">
-			                            	<strong><i class="fa fa-exclamation-triangle"></i> {{ $errors->first('name_extension') }}</strong>
-			                            </span>
-			                        @endif
-								</form>
+									        @if ($errors->has('last_name'))
+				                            <span class="help-block">
+				                            	<strong><i class="fa fa-exclamation-triangle"></i> {{ $errors->first('last_name') }}</strong>
+				                            </span>
+				                        @endif
+									
+									</div>
+									<!--Input field end-->
+								</div>
+								<div class="col-lg-6">
+									<!--Input field for name_extension-->
+									<div class="form-group{{ $errors->has('name_extension') ? 'has-error' : '' }}">
+									    {!! Form::label('Extension name') !!}
+									    {!! Form::text('name_extension', null, array('class'=>'form-control', 'placeholder'=>'Extension name')) !!}
+
+									        @if ($errors->has('name_extension'))
+				                            <span class="help-block">
+				                            	<strong><i class="fa fa-exclamation-triangle"></i> {{ $errors->first('name_extension') }}</strong>
+				                            </span>
+				                        @endif
+									
+									</div>
+									<!--Input field end-->
+								</div>
 							</div>
-						</div>
-						<div class="row">
-							<div class="col-lg-6">
-								<form class="form-group">
-									<label>Birth date :</label>
-									<input id="birth_date" type="text" name="birth_date" class="form-control"  required>
-								</form>
+							<!--Row closing-->
+							<!--Row opening-->
+							<div class="row">
+								<div class="col-lg-6">
+									<!--Input field for birth_date-->
+									<div class="form-group{{ $errors->has('birth_date') ? 'has-error' : '' }}">
+									    {!! Form::label('Birth date') !!}
+									    {!! Form::text('birth_date', null, array('required', 'class'=>'form-control', 'placeholder'=>'Birth name')) !!}
+
+									        @if ($errors->has('birth_date'))
+				                            <span class="help-block">
+				                            	<strong><i class="fa fa-exclamation-triangle"></i> {{ $errors->first('birth_date') }}</strong>
+				                            </span>
+				                        @endif
+									
+									</div>
+									<!--Input field end-->
+								</div>
 							</div>
-						</div>
-						<button type="submit" class="btn btn-primary block full-width m-b" data-syle="zoom-in">Submit</button>
-					</form>
+							<!--Row closing-->
+							<!--Row opening-->
+							<!--Submit form-->
+							<div class="form-group">
+							    {!! Form::submit('Submit', array('class'=>'btn btn-primary block full-width m-b', 'data-syle'=>'zoom-in')) !!}
+							</div>
+							<!--Submit form end-->
+						{!! Form::close() !!}
+						<!--Form closing-->
+					
 				</div>
 			</div>
 		</div>

@@ -1,5 +1,5 @@
 <?php
-
+//User model
 namespace Hulugan;
 
 use Illuminate\Notifications\Notifiable;
@@ -18,7 +18,7 @@ class User extends Authenticatable
         'name', 'email', 'password',
     ];
 
-    /**
+    /** 
      * The attributes that should be hidden for arrays.
      *
      * @var array
@@ -27,8 +27,8 @@ class User extends Authenticatable
         'password', 'remember_token',
     ]; 
 
-
-    public function inquiries(){
-      return $this->hasMany('App\Inquiry', 'encoded_by', 'user_id');
+    // One to many relationship between User and Customer...
+    public function customer(){
+      return $this->hasMany('Customer');
     }
 }

@@ -23,6 +23,9 @@ Route::get('/', function () {
 /*============================ HOME PAGE ROUTES ===============================*/
 Route::get('/home', 'HomeController@index');
 
+/*=========================== CUSTOMER PAGE ROUTES ==============================*/
+Route::get('/customers', ['as' => 'create', 'uses' => 'CustomerController@create']);
+Route::post('/customers', ['as' => 'customers_store', 'uses' => 'CustomerController@store']);
 
 /*============================ PRODUCT PAGE ROUTES ===============================*/
 
@@ -31,5 +34,3 @@ Route::get('/products',['uses' => 'SystemUsersController@getIndex']);
 Route::get('/products/getproducts', ['as'=>'products.getproducts','uses'=>'SystemUsersController@getProducts']);
 
 
-
-Route::get('/forms', 'CustomerController@index');

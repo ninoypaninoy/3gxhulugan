@@ -1,6 +1,6 @@
 <!-- 3GX Hulugan V2.1 -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"> 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -55,7 +55,7 @@
                     <li>
                         <a href="#"><i class="fa fa-comments"></i> <span class="nav-label">Inquiries</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
-                            <li><a href="{{ url('/forms') }}"><i class="fa fa-plus-circle"></i>Create New</a></li>
+                            <li><a href="{{ url('/customers') }}"><i class="fa fa-plus-circle"></i>Create New</a></li>
                             <li><a href="{{ url('applications/for-auditing') }}"><i class="fa fa-comments-o"></i>Inquiries</a></li>
                         </ul>
                     </li>
@@ -138,6 +138,12 @@
         <!-- end Topbar -->
         </div>
         <!-- end row -->
+
+        @if(Session::has('message'))
+            <div class="alert alert-info">
+              {{Session::get('message')}}
+            </div>
+        @endif
 
         <!-- Main Page Content -->
         @section('page-content')

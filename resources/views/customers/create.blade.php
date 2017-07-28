@@ -14,10 +14,12 @@
     </div>
 </div>
 <br>
+<!--Form for inquiry-->
 @include('customers/forms/_form')
+
 @endsection
 
-@push('scripts')
+@push('scripts') 
 
 <script>
 $(document).ready(function(){
