@@ -9,7 +9,7 @@
     <link href="css/animate.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 </head>
-
+ 
 <body class="gray-bg">
     <div class="middle-box text-center loginscreen animated fadeIn">
         <div class="row">
@@ -38,8 +38,8 @@
                                 <strong><i class="fa fa-exclamation-triangle"></i> {{ $errors->first('password') }}</strong>
                             </span>
                         @endif
-                    </div>
-                    <button type="submit" class=" btn btn-primary block full-width m-b" data-style="zoom-in">Login</button>
+                </div>
+                <button type="submit" class=" btn btn-primary block full-width m-b" data-style="zoom-in">Login</button>
                 <a href="{{ route('password.request') }}"><small>Forgot password?</small></a>
             </form>
         <p class="m-t"> <small><strong>Copyright</strong> 3GX Computers and IT Solutions &copy; 2017</small> </p>

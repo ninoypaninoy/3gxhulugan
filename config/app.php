@@ -118,7 +118,7 @@ return [
     |
     | Available Settings: "single", "daily", "syslog", "errorlog"
     |
-    */
+    */ 
 
     'log' => env('APP_LOG', 'single'),
 
@@ -181,6 +181,9 @@ return [
         Hulugan\Providers\EventServiceProvider::class,
         Hulugan\Providers\RouteServiceProvider::class,
 
+        //Laravelcollective/html
+        'Collective\Html\HtmlServiceProvider',
+
     ],
 
     /*
@@ -229,6 +232,8 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+        'Form' => 'Collective\Html\FormFacade',
+        'Html' => 'Collective\Html\HtmlFacade',
 
     ],
 

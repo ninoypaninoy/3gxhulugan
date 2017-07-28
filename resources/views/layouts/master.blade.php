@@ -18,7 +18,7 @@
     <link href="css/plugins/dataTables/datatables.min.css" rel="stylesheet">
 </head>
 <body class="">
-    <div id="wrapper">
+    <div id="wrapper"> 
 
         <!-- Sidebar -->
         <nav class="navbar-default navbar-static-side" role="navigation">
@@ -55,7 +55,7 @@
                     <li>
                         <a href="#"><i class="fa fa-comments"></i> <span class="nav-label">Inquiries</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
-                            <li><a href="{{ url('/create_new') }}"><i class="fa fa-plus-circle"></i>Create New</a></li>
+                            <li><a href="{{ url('/forms') }}"><i class="fa fa-plus-circle"></i>Create New</a></li>
                             <li><a href="{{ url('applications/for-auditing') }}"><i class="fa fa-comments-o"></i>Inquiries</a></li>
                         </ul>
                     </li>
