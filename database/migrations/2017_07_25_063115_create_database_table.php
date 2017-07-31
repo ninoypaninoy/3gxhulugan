@@ -318,7 +318,7 @@ class CreateDatabaseTable extends Migration
             //in this case the 3GX Computers and IT Solutions.
             $table->increments('id')->unique();
             $table->enum('application_type', array('inquiry','loan-aplication'));
-            $table->enum('loan_application_tag', array('inquiry', 'ci-investigation', 'ci-re-investigation', 'audit', 'admin-approval', 'release', 'borrower','pulled-out','declined', 'cancelled', 'fully-paid'))->nullable();
+            $table->enum('tag', array('inquiry', 'ci-investigation', 'ci-re-investigation', 'audit', 'admin-approval', 'release', 'borrower','pulled-out','declined', 'cancelled', 'fully-paid'))->nullable();
             $table->integer('interest_rate');
             $table->integer('downpayment_rate');
             $table->string('date_encoded');
@@ -339,9 +339,11 @@ class CreateDatabaseTable extends Migration
             //initializing foreign keys
             $table->integer('customer_id')->unsigned();
             $table->integer('encoded_by_id')->unsigned();
+            $table->integer('tagged_by_id')->unsigned();
             $table->integer('product_delivery_received_by_id')->unsigned()->nullable();
             $table->foreign('customer_id')->references('id')->on('customers');
             $table->foreign('encoded_by_id')->references('id')->on('users');
+            $table->foreign('tagged_by_id')->references('id')->on('users');
             $table->foreign('product_delivery_received_by_id')->references('id')->on('users');
 
         }); //end schema

@@ -12,11 +12,21 @@ class CreateRolesAndPermissionsTable extends Migration
      */
     public function up()
     {
+        /********************* GENERAL INFO ******************* 
+        The version of this Laravel is 5.4
         
         /********************* DATABASE INFO ******************* 
             roles                       set of all user roles
             permissions                 set of all permissions for roles
             permissions_line            set of all permissions of specific roles
+
+        /******************* LARAVEL COMMAND USED ******************* 
+            php artisan migrate                     migrate all data to the web server database
+                                                    trainees utilized xampp as a web server
+                                                    trainees utilized phpmyadmin as DBMS
+            php artisan db:seed --class=create_beta_it_administrators
+                                                    this command generates dummy data for IT Administrators
+            
         ****************************************************/
         $tableNames = config('permission.table_names');
         $foreignKeys = config('permission.foreign_keys');
