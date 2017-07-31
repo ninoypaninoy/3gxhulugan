@@ -17,7 +17,6 @@
     <link type="text/css" rel="stylesheet" href="css/plugins/dyscrollup/dyscrollup.css">
     <link href="css/plugins/dataTables/datatables.min.css" rel="stylesheet">
     <link href="css/plugins/datapicker/datepicker3.css" rel="stylesheet">
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
 </head>
 <body class="">
     <div id="wrapper"> 
@@ -164,36 +163,32 @@
     <!-- end wrapper -->
 
     <!-- Mainly scripts -->
-    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
-    <script type="text/javascript" src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
-    <script type="text/javascript" src="js/plugins/dataTables/datatables.min.js"></script>
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="js/plugins/dataTables/datatables.min.js"></script>
 
     <!-- Custom and plugin javascript -->
-    <script type="text/javascript" src="js/inspinia.js"></script>
-    <script type="text/javascript" src="js/plugins/pace/pace.min.js"></script>
-    <script type="text/javascript" src="js/plugins/datapicker/bootstrap-datepicker.js"></script>
+    <script src="js/inspinia.js"></script>
+    <script src="js/plugins/pace/pace.min.js"></script>
+    <script src="js/plugins/datapicker/bootstrap-datepicker.js"></script>
     <!-- Data picker -->
 
     <!--steps-->
-    <script type="text/javascript" src="js/plugins/steps/jquery.steps.min.js"></script>
+    <script src="js/plugins/steps/jquery.steps.min.js"></script>
     <!-- Jquery Validate -->
-    <script type="text/javascript" src="js/plugins/validate/jquery.validate.min.js"></script>
+    <script src="js/plugins/validate/jquery.validate.min.js"></script>
     <!-- jQuery UI -->
-    <script type="text/javascript" src="js/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <script src="js/plugins/jquery-ui/jquery-ui.min.js"></script>
     <!-- GITTER -->
-    <script type="text/javascript" src="js/plugins/gritter/jquery.gritter.min.js"></script>
+    <script src="js/plugins/gritter/jquery.gritter.min.js"></script>
 
 
     <!-- initialize sroll-to-top button -->
-    <script type="text/javascript" src="js/plugins/dyscrollup/dyscrollup.js"></script>
-    <script type="text/javascript">
-        dyscrollup.init();
-    </script>
+    <script src="js/plugins/dyscrollup/dyscrollup.js"></script>
+    <script>dyscrollup.init();</script>
     
-
-    
-    @stack('scripts')
+ @stack('scripts')
 </body>
 </html>
