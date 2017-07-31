@@ -40,10 +40,12 @@
                                         </tr>
                                     </thead>
                                     <tfoot>
-                                        <th>Item No</th>
-                                        <th>Item Description</th>
-                                        <th>Item Price</th>
-                                        <th>Action</th>
+                                        <tr>
+                                            <th>Item No</th>
+                                            <th>Item Description</th>
+                                            <th>Item Price</th>
+                                            <th>Action</th>
+                                        </tr>
                                     </tfoot>
                                 </table>
                                     <!-- end table -->
