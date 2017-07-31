@@ -96,7 +96,7 @@
 		                                <div class="input-group date">
 		                                    <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
 		                                    	{!! Form::text('birth_date', null, array('class'=>'form-control', 'placeholder'=>'Birth date')) !!}
-		                                    	<input type="text" class="form-control" value="10/11/2013">
+		                                    	<!--<input type="text" class="form-control" value="10/11/2013"/>-->
 		                                </div>
 		                            </div>
 									

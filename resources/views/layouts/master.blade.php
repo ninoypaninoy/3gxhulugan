@@ -31,8 +31,8 @@
                                 <!-- Display Logo -->
                                 <img  alt="image" src="img/home-logo-medium.png"/>
                             </span>
-                            <a href="{{ url('system-user/profile') }}" align="middle">
-                                <span class="clear">
+                            <a href="{{ url('system-user/profile') }}">
+                                <span class="text-center">
                                     <!-- Display Current User and Role -->
                                     <span class="block m-t-xs"><strong class="font-bold">{{ Auth::user()->first_name }} {{ Auth::user()->last_name }}</strong></span>
                                     <span class="text-muted text-xs block">IT Administrator</span>
@@ -85,13 +85,13 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="{{ url('system-users') }}""><i class="fa fa-user-circle-o"></i><span class="nav-label">System Users</span></a></a>
+                        <a href="{{ url('system-users') }}"><i class="fa fa-user-circle-o"></i><span class="nav-label">System Users</span></a>
                     </li>
                     <li>
                         <a href="#"><i class="fa fa-info-circle"></i> <span class="nav-label">Reports</span> <span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
                             <li><a href="{{ url('reports/') }}"><i class="fa fa-info-circle"></i>Soon..</a></li>
-                            <li><a href="{{ url('reports/') }} }}"><i class="fa fa-info-circle"></i>Soon..</a></li>
+                            <li><a href="{{ url('reports/') }}"><i class="fa fa-info-circle"></i>Soon..</a></li>
                         </ul>
                     </li>
                 <!-- end Metis Menu-->
