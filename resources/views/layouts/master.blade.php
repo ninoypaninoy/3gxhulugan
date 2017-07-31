@@ -16,6 +16,8 @@
     <link href="css/style.css" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="css/plugins/dyscrollup/dyscrollup.css">
     <link href="css/plugins/dataTables/datatables.min.css" rel="stylesheet">
+    <link href="css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
 </head>
 <body class="">
     <div id="wrapper"> 
@@ -56,13 +58,13 @@
                         <a href="#"><i class="fa fa-comments"></i> <span class="nav-label">Inquiries</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
                             <li><a href="{{ url('/customers') }}"><i class="fa fa-plus-circle"></i>Create New</a></li>
-                            <li><a href="{{ url('applications/for-auditing') }}"><i class="fa fa-comments-o"></i>Inquiries</a></li>
+                            <li><a href="{{ url('/customers/getinquirylist') }}"><i class="fa fa-comments-o"></i>Inquiries</a></li>
                         </ul>
                     </li>
                     <li>
                         <a href="#"><i class="fa fa-tasks"></i> <span class="nav-label">Loan Applications</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
-                            <li><a href="{{ url('applications/for-auditing') }}"><i class="fa fa-plus-circle"></i>Create New</a></li>
+                            <li><a href="{{ url('/customers/getinquirylist') }}"><i class="fa fa-plus-circle"></i>Create New</a></li>
                             <li><a href="{{ url('applications/for-ci-investigation') }}"><i class="fa fa-gavel"></i>For Investigation</a></li>
                             <li><a href="{{ url('applications/for-auditing') }}"><i class="fa fa-id-card-o"></i>For Auditing</a></li>
                             <li><a href="{{ url('applications/for-admin-approval') }}"><i class="fa fa-thumbs-o-up"></i>For Admin Aproval</a></li>
@@ -162,31 +164,36 @@
     <!-- end wrapper -->
 
     <!-- Mainly scripts -->
-    <script src="js/jquery-3.1.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
-    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
-    <script src="js/plugins/dataTables/datatables.min.js"></script>
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script type="text/javascript" src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+    <script type="text/javascript" src="js/plugins/dataTables/datatables.min.js"></script>
 
     <!-- Custom and plugin javascript -->
-    <script src="js/inspinia.js"></script>
-    <script src="js/plugins/pace/pace.min.js"></script>
+    <script type="text/javascript" src="js/inspinia.js"></script>
+    <script type="text/javascript" src="js/plugins/pace/pace.min.js"></script>
+    <script type="text/javascript" src="js/plugins/datapicker/bootstrap-datepicker.js"></script>
+    <!-- Data picker -->
 
     <!--steps-->
-    <script src="js/plugins/steps/jquery.steps.min.js"></script>
+    <script type="text/javascript" src="js/plugins/steps/jquery.steps.min.js"></script>
     <!-- Jquery Validate -->
-    <script src="js/plugins/validate/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="js/plugins/validate/jquery.validate.min.js"></script>
     <!-- jQuery UI -->
-    <script src="js/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/plugins/jquery-ui/jquery-ui.min.js"></script>
     <!-- GITTER -->
-    <script src="js/plugins/gritter/jquery.gritter.min.js"></script>
+    <script type="text/javascript" src="js/plugins/gritter/jquery.gritter.min.js"></script>
+
 
     <!-- initialize sroll-to-top button -->
     <script type="text/javascript" src="js/plugins/dyscrollup/dyscrollup.js"></script>
     <script type="text/javascript">
         dyscrollup.init();
     </script>
+    
 
+    
     @stack('scripts')
 </body>
 </html>

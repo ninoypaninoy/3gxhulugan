@@ -34,12 +34,6 @@ $(document).ready(function(){
                         return true;
                     }
 
-                    // Forbid suppressing "Warning" step if the user is to young
-                    if (newIndex === 3 && Number($("#age").val()) < 18)
-                    {
-                        return false;
-                    }
-
                     var form = $(this);
 
                     // Clean up if user went backward before

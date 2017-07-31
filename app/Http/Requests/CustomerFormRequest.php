@@ -25,9 +25,9 @@ class CustomerFormRequest extends FormRequest
     public function rules()
     {
         return [
-            'first_name' => 'required|alpha',
-            'last_name' => 'required|alpha',
-            'birth_date' => 'required',
+            'first_name'    =>      'required|alpha',
+            'last_name'     =>      'required|alpha',
+            'birth_date'    =>      'required',
         ];
     }
 }

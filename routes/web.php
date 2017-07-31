@@ -24,16 +24,19 @@ Route::get('/', function () {
 Route::get('/home', 'HomeController@index');
 
 /*=========================== CUSTOMER PAGE ROUTES ==============================*/
-Route::get('/customers', ['as' => 'create', 'uses' => 'CustomerController@create']);
-Route::post('/customers', ['as' => 'customers_store', 'uses' => 'CustomerController@store']);
+Route::get('/customers', 	['as' => 'create', 			'uses' => 'CustomerController@create']);
+Route::post('/customers', 	['as' => 'customers_store', 'uses' => 'CustomerController@store']);
 
 /*============================ PRODUCT PAGE ROUTES ===============================*/
 
 //route for products layout file and another one for getting data
-Route::get('/products',['uses' => 'SystemUsersController@getIndex']); 
-Route::get('/products/getproducts', ['as'=>'products.getproducts','uses'=>'SystemUsersController@getProducts']);
+Route::get('/products',				['uses' => 'SystemUsersController@getIndex']); 
+Route::get('/products/getproducts', ['as'	=>'products.getproducts','uses'=>'SystemUsersController@getProducts']);
 
-/*============================ VALIDATION ROUTES ===============================*/
-Route::get('customers/formValidation', 'CustomerController@formValidation');
-Route::post('customers/formValidationPost', 'CustomerController@formValidationPost');
+/*============================ INQUIRY PAGE ROUTES ===============================*/
+
+//route for inquiry layout file and another one for getting data
+//Route::get('/customers/getindex',		 ['as'	=>	'customers_getindex',					'uses'	=> 'CustomerController@getIndex']); 
+Route::get('/customers/getinquirylist', ['as'	=>	'customers.getinquirylist',	'uses'	=> 'CustomerController@getInquiryList']);
+
 

@@ -2,7 +2,7 @@
 
 namespace Hulugan\Http\Controllers;
 
-use Illuminate\Http\Request;
+use Illuminate\Http\Request; 
 use Yajra\Datatables\Datatables;
 use Hulugan\User;
 use DB;
