@@ -208,6 +208,7 @@ class CreateDatabaseTable extends Migration
             //this table contains the notes of the user to the customer profile(s)
             $table->string('note');
             $table->enum('status', array('issue','resolved')); // the note can be marked as issue or resolved
+            $table->date('date');
             //initializing foreign keys - these keys are also the primary keys of the table
             $table->integer('user_id')->unsigned();
             $table->integer('customer_id')->unsigned();
@@ -318,7 +319,8 @@ class CreateDatabaseTable extends Migration
             //in this case the 3GX Computers and IT Solutions.
             $table->increments('id')->unique();
             $table->enum('application_type', array('inquiry','loan-aplication'));
-            $table->enum('tag', array('inquiry', 'ci-investigation', 'ci-re-investigation', 'audit', 'admin-approval', 'release', 'borrower','pulled-out','declined', 'cancelled', 'fully-paid'))->nullable();
+            $table->enum('LA_tag', array('ci-investigation', 'ci-re-investigation', 'audit', 'admin-approval', 'release', 'borrower','pulled-out','declined', 'cancelled', 'fully-paid'))->nullable();
+            $table->string('LA_tagger_remarks')->nullable();
             $table->integer('interest_rate');
             $table->integer('downpayment_rate');
             $table->string('date_encoded');
@@ -327,7 +329,6 @@ class CreateDatabaseTable extends Migration
             $table->double('advanced_downpayment')->nullable();
             $table->double('added_price')->nullable();
             $table->date('date_released')->nullable();
-            $table->string('endorser_remarks')->nullable();
             //the following rows pertain to the information about the received delivery receipt
             $table->string('product_delivery_receipt_no')->nullable();
             $table->date('product_delivery_received_date')->nullable();
@@ -339,11 +340,11 @@ class CreateDatabaseTable extends Migration
             //initializing foreign keys
             $table->integer('customer_id')->unsigned();
             $table->integer('encoded_by_id')->unsigned();
-            $table->integer('tagged_by_id')->unsigned();
+            $table->integer('LA_tagged_by_id')->unsigned();
             $table->integer('product_delivery_received_by_id')->unsigned()->nullable();
             $table->foreign('customer_id')->references('id')->on('customers');
             $table->foreign('encoded_by_id')->references('id')->on('users');
-            $table->foreign('tagged_by_id')->references('id')->on('users');
+            $table->foreign('LA_tagged_by_id')->references('id')->on('users');
             $table->foreign('product_delivery_received_by_id')->references('id')->on('users');
 
         }); //end schema
@@ -353,6 +354,7 @@ class CreateDatabaseTable extends Migration
             //this table contains the notes of the user to the loan applications
             $table->string('note');
             $table->enum('status', array('issue','resolved')); // the note can be marked as issue or resolved
+            $table->date('date');
             //initializing foreign keys - these keys are also the primary keys of the table
             $table->integer('user_id')->unsigned();
             $table->integer('loan_application_id')->unsigned();
