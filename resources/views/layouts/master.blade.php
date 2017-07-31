@@ -139,12 +139,6 @@
         </div>
         <!-- end row -->
 
-        @if(Session::has('message'))
-            <div class="alert alert-info">
-              {{Session::get('message')}}
-            </div>
-        @endif
-
         <!-- Main Page Content -->
         @section('page-content')
         @show
